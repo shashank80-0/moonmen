@@ -32,14 +32,24 @@
 	opacity: 0.7;
 }
 
-/*
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background: white;
-  cursor: pointer;
+.media-detail{
+  overflow: hidden;
+  white-space: nowrap;
 }
-*/
+
+.flowing {
+  position: relative;
+  animation: 3s linear 0s infinite alternate flowing;
+}
+
+@keyframes flowing {
+  0%, 25% {
+    transform: translateX(0%);
+    left: 0%;
+  }
+  75%,
+  100% {
+    transform: translateX(-100%);
+    left: 100%;
+  }
+}
