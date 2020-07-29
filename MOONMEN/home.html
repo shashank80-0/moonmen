@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="css/font-size.css">
+<link rel="stylesheet" type="text/css" href="css/styles.css">
 
 <!-- Bootstrap css-->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -104,7 +104,7 @@ body{
 
 <!-- Music Section -->
 
-<div class="container-fluid" id="music">
+<div class="container-fluid my-3" id="music">
     <h3 class="d-flex justify-content-center">MUSIC</h3>
     <p class="d-flex justify-content-center h5">Our favourites</p>   
   
@@ -144,10 +144,7 @@ body{
 <!-- Player navigation bar-->
 <br>
 
-  <nav class="navbar navbar-expand-md bg-dark fixed-bottom shadow music-player invisible row">
-
-
-    
+  <nav class="navbar navbar-expand-md fixed-bottom shadow music-player invisible row" style="background: linear-gradient(to bottom, #411f1f 0%, #000000 100%);">    
     <div class="d-flex justify-content-center align-items-center col-md-3">
       <img class="rounded-circle" style="width: 45px" class="px-2" id="media-art">
       <div class="col media-detail">
@@ -163,24 +160,28 @@ body{
       <div class="d-flex col-md-6">   
 
         <div class="music-control d-flex justify-content-center align-items-center" style="width: 20%">        
-          <button class="btn" id="play"><i class="fa fa-play text-white"></i></button>
-          <button class="btn" id="pause"><i class="fa fa-pause text-white"></i></button>
-          <button class="btn" id="stop"><i class="fa fa-stop text-white"></i></button>
+          <button class="btn" id="play" style="border-radius: 50%"><i class="fa fa-play text-white"></i></button>
+          <button class="btn" id="pause" style="border-radius: 50%"><i class="fa fa-pause text-white"></i></button>
+          <button class="btn" id="stop" style="border-radius: 50%"><i class="fa fa-stop text-white"></i></button>
         </div>      
         <div class="d-flex justify-content-center align-items-center" style="width: 80%">
-           <input type="range" name="duration-range" min="0" max="100" value="0" class="duration-range slider" style="width: 85%">
-           <span class="duration-time text-white px-2" style="width: 15%">00:00</span>          
+           <span class="text-white mx-1" style="width: 10%" id="current-time"></span>
+           <input type="range" name="duration-range" min="0" max="100" value="0" class="slider" id="duration-slider" style="width: 80%">
+           <span class="text-white mx-2" style="width: 10%" id="total-time">/span>          
         </div>
 
       </div>
 
 
-
-
-
-      <div class="d-flex justify-content-center align-items-center col-md-3">
+      <div class="d-flex justify-content-center align-items-center col-md-2">
           <span class="text-white"><i class="fa fa-volume-up text-white px-2" style="width: 10%"></i></span> 
-          <input type="range" name="volume-range" min="0" max="100" value="0" class="px-1 volume-range slider" style="width: 35%">          
+          <input type="range" name="volume-range" min="0" max="100" value="80" class="slider" id="volume-slider" style="width: 50%">          
+      </div>
+
+
+
+      <div class="col-md-1 d-flex justify-content-end align-items-center">
+        <span><i class="fa fa-sort-desc text-white btn" id="close-player"></i></span>
       </div>
   </nav>
 
@@ -191,8 +192,6 @@ body{
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/cover-responsive.js"></script>
     <script type="text/javascript" src="js/music-player.js"></script>
-
-
 
 </body>
 </html>
