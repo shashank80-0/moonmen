@@ -20,11 +20,11 @@ $(document).ready(function(){
 	
 	$('.stream-music').click(function(){
 
+
 		resetPlayer();                              
 		clearInterval(updateTimer);
 		updateTimer = setInterval(seekUpdate,1000);
 		isPlaying = false;
-
 		loadSong($(this).attr('id')); 	
 		
 		$('.music-player').fadeIn()
@@ -75,6 +75,7 @@ $(document).ready(function(){
 		/*Checking if content is overflowing*/
 		checkOverflow(mediaTitle,"#media-title");
 		checkOverflow(mediaArtist,"#media-artist");
+				//checkOverflow(mediaTitle,'#'+id);
 		
 		/*------------------------------------------------*/
 
@@ -199,9 +200,9 @@ function checkOverflow(el,con){
 	wEl = textWidth(el);
 		wCon = $(con).width();
 		if(wEl>wCon && wCon>0){
-			console.log("Element overlflowing");
-			console.log("Element width ="+wEl);
-			console.log("container width ="+wCon);
+			//console.log("Element overlflowing");
+			//console.log("Element width ="+wEl);
+			//console.log("container width ="+wCon);
 			$(con).addClass('flowing');
 		}
 		else{
