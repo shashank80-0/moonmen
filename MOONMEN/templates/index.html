@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<title>MoonMen</title>
+<meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="icon" type="image" href="/static/images/logo.png">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+
+<!-- Bootstrap css-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  line-height: 1.8;
+}
+  
+
+.cover {
+    background-position: right center;
+    background-size: cover;
+    width: 100%;
+    }
+
+body{
+  background-color: #E8E8E8;
+}
+
+</style>
+
+<body>
+<!-- Navbar -->
+<header>
+  <!-- lLeft-sided navbar -->
+  <nav class="navbar navbar-expand-md sticky-top shadow" style="background-color: #E0E0E0">
+    <a href="#home" class="text-dark navbar-brand align-center" style="font-size: 1.5rem;">
+    <img src="/static/images/logo.png" width="50" height="50" class="inline-block align-center mx-2" alt="">MoonMen
+    </a>    
+
+    <!-- This section is for responsive navbar design -->
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=#navbarCollapse aria-controls="navbarCollapse" aria-expanded="false" aria-label = "Toggle navigation">
+      <span class="fa fa-bars text-dark"></span>
+      </button>
+
+    <!-- Right-sided navbar links -->
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+      <a href="#about" class="nav-link text-dark"><i class="fa fa-info-circle mx-1"></i>ABOUT</a>
+      </li>
+      <li class="nav-item">
+      <a href="#music" class="nav-link text-dark"><i class="fa fa-music mx-1"></i>MUSIC</a>
+      </li>
+      <li class="nav-item">
+      <a href="#contact" class="nav-link text-dark"><i class="fa fa-envelope mx-1"></i>CONTACT</a>
+      </li>
+    </ul>
+    </div> 
+  </nav>
+</header>
+
+<!-- Cover page -->
+  <div class="cover container-fluid"> 
+  <div class="d-flex flex-column text-white pt-3 cover-text">
+    <span class="slogan">All the moonmen want things their way</span>
+    <span class="tagline">But we make sure they see the sun</span>
+    <p><a href="#about" class="btn btn-light my-3 journey">START JOURNEY</a></p>
+  </div> 
+  </div>
+
+  <!-- About Section -->
+<div class="w3-container" style="padding:128px 16px" id="about">
+  <h3 class="w3-center">ABOUT THE COMPANY</h3>
+  <p class="w3-center w3-large">Key features of our company</p>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-quarter">
+      <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
+      <p class="w3-large">Responsive</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Passion</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Design</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Support</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Music Section -->
+
+<div class="container-fluid my-3" id="music">
+    <h3 class="d-flex justify-content-center">MUSIC</h3>
+    <p class="d-flex justify-content-center h5">Our favourites</p>   
+  
+  <div class="row justify-content-center mt-3" id="music-section">
+
+  </div>
+</div>
+<br>
+
+<!-- Player navigation bar-->
+<br>
+
+  <nav class="navbar navbar-expand-md fixed-bottom shadow music-player invisible row" style="background: linear-gradient(to bottom, #411f1f 0%, #000000 100%);">    
+    <div class="d-flex justify-content-center align-items-center col-md-3">
+      <img class="rounded-circle" style="width: 45px" class="px-2" id="media-art">
+      <div class="col media-detail">
+         <span class="text-white px-2 row" id="media-title" style="font-size: 1.2rem;"></span>   
+          <span class="text-white px-2 row" id="media-artist" style="font-size: 0.8rem"></span>           
+      </div>           
+    </div>
+              
+
+      <div class="d-flex col-md-6">   
+
+        <div class="music-control d-flex justify-content-center align-items-center" style="width: 20%">        
+          <button class="btn" id="play" style="border-radius: 50%"><i class="fa fa-play text-white"></i></button>
+          <button class="btn" id="pause" style="border-radius: 50%"><i class="fa fa-pause text-white"></i></button>
+          <button class="btn" id="stop" style="border-radius: 50%"><i class="fa fa-stop text-white"></i></button>
+        </div>      
+        <div class="d-flex justify-content-center align-items-center" style="width: 80%">
+           <span class="text-white mx-1" style="width: 10%" id="current-time"></span>
+           <input type="range" name="duration-range" min="0" max="100" value="0" class="slider" id="duration-slider" style="width: 80%">
+           <span class="text-white mx-2" style="width: 10%" id="total-time">/span>          
+        </div>
+
+      </div>
+
+
+      <div class="d-flex justify-content-center align-items-center col-md-2">
+          <span class="text-white"><i class="fa fa-volume-up text-white px-2" style="width: 10%"></i></span> 
+          <input type="range" name="volume-range" min="0" max="100" value="80" class="slider" id="volume-slider" style="width: 50%">          
+      </div>
+
+
+
+      <div class="col-md-1 d-flex justify-content-end align-items-center">
+        <span><i class="fa fa-sort-desc text-white btn" id="close-player"></i></span>
+      </div>
+  </nav>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/song-api.js"></script>
+    <script type="text/javascript" src="/static/js/music-bar.js"></script>
+    <script type="text/javascript" src="/static/js/home-cover.js"></script>
+    
+
+</body>
+</html>

@@ -79,7 +79,7 @@ $(document).ready(function(){
 		/*------------------------------------------------*/
 
 		/*Creating an audio element*/		
-		source = ".\\audios\\"+songId+".mp3"
+		source = "/static/audios/"+songId+".mp3"
 		audio.setAttribute('src', source);
 		/*------------------------------------------------*/
 	}
