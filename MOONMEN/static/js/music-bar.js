@@ -26,8 +26,9 @@ $(document).ready(function(){
 		isPlaying = false;
 		loadSong($(this).attr('id')); 	
 		
-		$('.music-player').fadeIn()
-						  .removeClass('invisible');
+		
+		//$('.music-player').fadeIn()
+		//				  .removeClass('invisible');
 
 		
 		play.click(function(){
@@ -81,6 +82,9 @@ $(document).ready(function(){
 		/*Creating an audio element*/		
 		source = "/static/audios/"+songId+".mp3"
 		audio.setAttribute('src', source);
+
+		$('.music-player').fadeIn().removeClass('invisible');
+
 		/*------------------------------------------------*/
 	}
 
