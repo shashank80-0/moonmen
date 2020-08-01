@@ -22,9 +22,9 @@ $(document).ready(function(){
 
 		resetPlayer();                              
 		clearInterval(updateTimer);
+		loadSong($(this).attr('id')); 	
 		updateTimer = setInterval(seekUpdate,1000);
 		isPlaying = false;
-		loadSong($(this).attr('id')); 	
 		
 		
 		//$('.music-player').fadeIn()
