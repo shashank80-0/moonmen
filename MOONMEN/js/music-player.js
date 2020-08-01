@@ -18,8 +18,7 @@ $(document).ready(function(){
 	
 	sliderColor();
 	
-	$('.stream-music').click(function(){
-
+	$(document).on("click",".stream-music",function(){
 
 		resetPlayer();                              
 		clearInterval(updateTimer);
