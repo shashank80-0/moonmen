@@ -22,8 +22,12 @@ $(document).ready(function(){
 
 		resetPlayer();                              
 		clearInterval(updateTimer);
-		loadSong($(this).attr('id')); 	
-		updateTimer = setInterval(seekUpdate,1000);
+		loadSong($(this).attr('id'));
+
+		if(audio.duration!=NaN){
+			updateTimer = setInterval(seekUpdate,1000);
+		}
+		
 		isPlaying = false;
 		
 		
