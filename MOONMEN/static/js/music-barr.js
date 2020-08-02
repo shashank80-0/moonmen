@@ -24,9 +24,7 @@ $(document).ready(function(){
 		clearInterval(updateTimer);
 		loadSong($(this).attr('id'));
 
-		if(audio.duration!=NaN){
-			updateTimer = setInterval(seekUpdate,1000);
-		}
+		updateTimer = setInterval(seekUpdate,2000);
 		
 		isPlaying = false;
 		
@@ -138,8 +136,6 @@ $(document).ready(function(){
 		if(isPlaying){
 			sliderColor();
 		}
-			
-
 		durationSlider.change(function(){
 			let seekTo = audio.duration * (durationSlider.val() / 100);
 			audio.currentTime = seekTo;
