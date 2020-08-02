@@ -136,16 +136,19 @@ $(document).ready(function(){
 		if(isPlaying){
 			sliderColor();
 		}
-		durationSlider.change(function(){
-			let seekTo = audio.duration * (durationSlider.val() / 100);
-			audio.currentTime = seekTo;
-			sliderColor();	
-		});
+		
+		if(audio.readyState > 0){
+			
+			durationSlider.change(function(){
+				let seekTo = audio.duration * (durationSlider.val() / 100);
+				audio.currentTime = seekTo;
+				sliderColor();	
+			});
 
-		volumeSlider.change(function(){
-			audio.volume = (volumeSlider.val() / 100);
-			sliderColor();	
-		});
+			volumeSlider.change(function(){
+				audio.volume = (volumeSlider.val() / 100);
+				sliderColor();	
+			});
 
 			let seekPosition = 0;
 			if(!isNaN(audio.duration)){
@@ -165,6 +168,10 @@ $(document).ready(function(){
 			    currTime.text(currentMinutes + ":" + currentSeconds); 
 	    		totalTime.text(durationMinutes + ":" + durationSeconds); 
 			}
+		
+		}
+		
+		
 		
 	}
 
