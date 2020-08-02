@@ -24,7 +24,7 @@ $(document).ready(function(){
 		clearInterval(updateTimer);
 		loadSong($(this).attr('id'));
 
-		updateTimer = setInterval(seekUpdate,2000);
+		updateTimer = setInterval(seekUpdate,1000);
 		
 		isPlaying = false;
 		
@@ -148,7 +148,7 @@ $(document).ready(function(){
 		});
 
 			let seekPosition = 0;
-			if((audio.duration != "NaN")){
+			if(!isNaN(audio.duration)){
 				seekPosition = audio.currentTime * (100 / audio.duration);
 				durationSlider.val(seekPosition);
 			
