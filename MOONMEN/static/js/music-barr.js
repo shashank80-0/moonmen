@@ -139,6 +139,7 @@ $(document).ready(function(){
 		
 		if(audio.readyState > 0){
 			
+
 			durationSlider.change(function(){
 				let seekTo = audio.duration * (durationSlider.val() / 100);
 				audio.currentTime = seekTo;
@@ -210,11 +211,8 @@ function checkOverflow(el,con){
 	wEl = textWidth(el);
 		wCon = $(con).width();
 		if(wEl>wCon && wCon>0){
-			//console.log("Element overlflowing");
-			//console.log("Element width ="+wEl);
-			//console.log("container width ="+wCon);
 			$(con).addClass('flowing');
-		}
+			}
 		else{
 			$(con).removeClass('flowing');
 		}

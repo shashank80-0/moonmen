@@ -32,6 +32,26 @@ body{
   background-color: #E8E8E8;
 }
 
+@media(min-width: 768px){
+  #volume-slider{
+    width: 50%;
+  }
+  #duration-slider{
+    width: 80%;
+  }
+  #play-duration{
+    width: 80%;
+  }
+  #total-time{
+    width: 10%;
+  } 
+  #current-time{
+    width:10%;
+  }
+  } 
+}
+
+
 </style>
 
 <body>
@@ -52,13 +72,7 @@ body{
     <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-      <a href="#about" class="nav-link text-dark"><i class="fa fa-info-circle mx-1"></i>ABOUT</a>
-      </li>
-      <li class="nav-item">
       <a href="#music" class="nav-link text-dark"><i class="fa fa-music mx-1"></i>MUSIC</a>
-      </li>
-      <li class="nav-item">
-      <a href="#contact" class="nav-link text-dark"><i class="fa fa-envelope mx-1"></i>CONTACT</a>
       </li>
     </ul>
     </div> 
@@ -91,25 +105,25 @@ body{
 
   <nav class="navbar navbar-expand-md fixed-bottom shadow music-player invisible row" style="background: linear-gradient(to bottom, #411f1f 0%, #000000 100%);">    
     <div class="d-flex justify-content-center align-items-center col-md-3">
-      <img class="rounded-circle" style="width: 45px" class="px-2" id="media-art">
+      <img class="rounded-circle" class="px-4" id="media-art" style="width: 45px;">
       <div class="col media-detail">
-         <span class="text-white px-2 row" id="media-title" style="font-size: 1.2rem;"></span>   
-          <span class="text-white px-2 row" id="media-artist" style="font-size: 0.8rem"></span>           
+         <span class="text-white row" id="media-title" style="font-size: 1.2rem;"></span>   
+          <span class="text-white row" id="media-artist" style="font-size: 0.8rem"></span>           
       </div>           
     </div>
               
 
       <div class="d-flex col-md-6">   
 
-        <div class="music-control d-flex justify-content-center align-items-center" style="width: 20%">        
+        <div class="music-control d-flex justify-content-center align-items-center">        
           <button class="btn" id="play" style="border-radius: 50%"><i class="fa fa-play text-white"></i></button>
           <button class="btn" id="pause" style="border-radius: 50%"><i class="fa fa-pause text-white"></i></button>
           <button class="btn" id="stop" style="border-radius: 50%"><i class="fa fa-stop text-white"></i></button>
         </div>      
-        <div class="d-flex justify-content-center align-items-center" style="width: 80%">
-           <span class="text-white mx-1" style="width: 10%" id="current-time"></span>
-           <input type="range" name="duration-range" min="0" max="100" value="0" class="slider" id="duration-slider" style="width: 80%">
-           <span class="text-white mx-2" style="width: 10%" id="total-time">/span>          
+        <div class="d-flex justify-content-center align-items-center" id="play-duration">
+           <span class="text-white mx-1"id="current-time"></span>
+           <input type="range" name="duration-range" min="0" max="100" value="0" class="slider" id="duration-slider">
+           <span class="text-white mx-2" id="total-time">/span>          
         </div>
 
       </div>
@@ -117,7 +131,7 @@ body{
 
       <div class="d-flex justify-content-center align-items-center col-md-2">
           <span class="text-white"><i class="fa fa-volume-up text-white px-2" style="width: 10%"></i></span> 
-          <input type="range" name="volume-range" min="0" max="100" value="80" class="slider" id="volume-slider" style="width: 50%">          
+          <input type="range" name="volume-range" min="0" max="100" value="80" class="slider" id="volume-slider">          
       </div>
 
 
